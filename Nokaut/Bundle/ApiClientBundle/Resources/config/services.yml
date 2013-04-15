@@ -1,0 +1,21 @@
+parameters:
+    nokaut.auth.plugin.class: Nokaut\ApiClient\Plugin\NokautAuthPlugin
+    nokaut.client.class: Nokaut\ApiClient\Client\Client
+    nokaut.guzzle.client.class: Guzzle\Http\Client
+
+services:
+    nokaut.auth.plugin:
+        class: %nokaut.auth.plugin.class%
+        calls:
+            - [setApiKey, [%nokaut.api.key.public%]]
+            - [setPrivateKey, [%nokaut.api.key.private%]]
+
+    nokaut.guzzle.client:
+        class: %nokaut.guzzle.client.class%
+        arguments: [%nokaut.api.baseUrl%]
+            calls:
+                - [addSubscribber, [@nokaut.auth.plugin]]
+
+    nokaut.client:
+        class: %nokaut.client.class%
+        arguments: [@nokaut.guzzle.client]
