@@ -13,8 +13,8 @@ services:
     nokaut.guzzle.client:
         class: %nokaut.guzzle.client.class%
         arguments: [%nokaut.api.baseUrl%]
-            calls:
-                - [addSubscribber, [@nokaut.auth.plugin]]
+        calls:
+            - [addSubscriber, [@nokaut.auth.plugin]]
 
     nokaut.client:
         class: %nokaut.client.class%
