@@ -16,7 +16,7 @@
 	},
 	"autoload": {
 		"psr-0": {
-			"Nokaut\\Bundle\\ApiClientBundle": "Bundle/ApiClientBundle/"
+			"Nokaut\\Bundle\\ApiClientBundle": "Nokaut/Bundle/ApiClientBundle/"
 		}
 	}
 }
