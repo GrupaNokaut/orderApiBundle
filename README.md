@@ -10,11 +10,12 @@ Instalation
 ```
 2. Update deps ``composer update``
 3. Add ApiClientBundle to AppKernel
+
 ```php
-	$bundles = array(
-		...
-		new Nokaut\Bundle\ApiClientBundle\ApiClientBundle()
-	);
+    $bundles = array(
+        ...
+        new Nokaut\Bundle\ApiClientBundle\ApiClientBundle()
+    );
 ```
 
 Configuration
