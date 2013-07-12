@@ -23,10 +23,10 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->scalarNode('key.private')->end()
-                ->scalarNode('key.public')->end()
-                ->scalarNode('baseUrl')->default('http://order-api.nokaut.pl/v1.0/')->end()
-                ->scalarNode()->end()
+                ->scalarNode('key_private')->end()
+                ->scalarNode('key_public')->end()
+                ->scalarNode('baseUrl')->defaultValue('http://order-api.nokaut.pl/v1.0/')->end()
+                ->end()
         ;
 
         return $treeBuilder;

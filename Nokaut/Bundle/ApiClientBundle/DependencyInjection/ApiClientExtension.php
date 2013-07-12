@@ -26,8 +26,8 @@ class ApiClientExtension extends Extension
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
 
-        $container->setParameter('nokaut.api.key.public', $config['key.public']);
-        $container->setParameter('nokaut.api.key.private', $config['key.private']);
+        $container->setParameter('nokaut.api.key.public', $config['key_public']);
+        $container->setParameter('nokaut.api.key.private', $config['key_private']);
         $container->setParameter('nokaut.api.baseUrl', $config['baseUrl']);
     }
 }
